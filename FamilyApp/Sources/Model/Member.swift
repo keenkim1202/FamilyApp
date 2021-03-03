@@ -5,4 +5,10 @@
 //  Created by KEEN on 2021/03/03.
 //
 
-import Foundation
+import UIKit
+
+struct Member {
+  var name: String
+  var state: String
+  var thumbnail: UIImage?
+}
