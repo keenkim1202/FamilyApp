@@ -9,44 +9,59 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
-  // TODO : searchBar 연결해서 검색 되도록 하기
   // TODO : 매세지 목록 탭 화면 구성하기
   
   var userType: UserType?
-  var searchWord: String? = nil
+  
   let searchController: UISearchController = UISearchController()
 
-  var dummyList: [UserType] = [
-    UserType(name: "kate", state: "공부중", thumbnail: UIImage(named: "defaultProfile")),
-    UserType(name: "keen", state: "휴식중", thumbnail: UIImage(named: "defaultProfile"))]
+  var searchWord: String? = nil
+  
+  var entries: [UserType] = []
+  var filteredEntries: [UserType] = []
+  var selectedUserType: UserType?
+  var filtered: Bool = false
   
   @IBOutlet weak var tableView: UITableView!
-
+  
+  var dummyList: [UserType] = [
+    UserType(name: "나", state: "공부중", thumbnail: UIImage(named: "defaultProfile")),
+    UserType(name: "엄마", state: "휴식중", thumbnail: UIImage(named: "defaultProfile")),
+    UserType(name: "동생", state: "약속", thumbnail: UIImage(named: "defaultProfile"))
+]
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    searchController.searchBar.placeholder = "이름으로 검색을 할 수 있습니다."
+    searchController.searchResultsUpdater = self
+    searchController.searchBar.placeholder = "이름으로 검색"
     navigationItem.searchController = searchController
+    definesPresentationContext = true
   }
-
 }
 
 // MARK: TableView Delegate & DataSource
 extension HomeViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  func tableView(
+    _ tableView: UITableView,
+    heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 85
   }
 }
 
 extension HomeViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return dummyList.count
+  func tableView(
+    _ tableView: UITableView,
+    numberOfRowsInSection section: Int) -> Int {
+    return filtered ? filteredEntries.count : dummyList.count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell") as! HomeTableViewCell
     
-    let member = dummyList[indexPath.row]
+    let member = filtered ? filteredEntries[indexPath.row] : dummyList[indexPath.row]
+    
     cell.nameLabel.text = member.name
     cell.stateLabel.text = member.state
     cell.profileImage.image = member.thumbnail
@@ -58,16 +73,32 @@ extension HomeViewController: UITableViewDataSource {
     
     return cell
   }
+  
+  func tableView(
+    _ tableView: UITableView,
+    willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    selectedUserType = filtered ? filteredEntries[indexPath.row] : entries[indexPath.row]
+    if let cell = tableView.cellForRow(at: indexPath) as? HomeTableViewCell {
+      selectedUserType?.thumbnail = cell.profileImage.image
+    }
+    return indexPath
+  }
 }
 
 // MARK: UISearchResultsUpdating
 extension HomeViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
+  func updateSearchResults(
+    for searchController: UISearchController) {
     let searchWord = searchController.searchBar.text
-    
+
     guard self.searchWord != searchWord else { return }
-//    filtered = (searchWord?.isEmpty ?? true).negate
+    filtered = (searchWord?.isEmpty ?? true).negate
     
+    if filtered {
+      filteredEntries = dummyList.filter({ (user: UserType) -> Bool in
+        return user.name.lowercased().contains(searchWord!.lowercased())
+      })
+    }
     tableView.reloadData()
   }
 }
