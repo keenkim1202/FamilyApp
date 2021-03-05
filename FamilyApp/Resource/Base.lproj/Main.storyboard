@@ -148,7 +148,6 @@
             </objects>
             <point key="canvasLocation" x="1868.1159420289857" y="-141.29464285714286"/>
         </scene>
-        <!--메세지 목록-->
         <scene sceneID="1f2-gg-fXL">
             <objects>
                 <viewController id="EwN-rJ-VDf" customClass="MessageViewController" customModule="FamilyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,16 +253,6 @@
                             <constraint firstItem="mYT-qx-O3H" firstAttribute="top" secondItem="JIQ-fb-Pht" secondAttribute="top" id="iRX-P3-nbu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메세지 목록" id="qGs-rz-ArG">
-                        <barButtonItem key="leftBarButtonItem" title="편집" id="Dde-Xb-fg3"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="mYT-qx-O3H" id="ise-25-rAC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="raW-gQ-V8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1868.1159420289857" y="534.375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ER5-r4-pag">
@@ -277,7 +266,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="bYf-4k-51z" kind="relationship" relationship="viewControllers" id="Pdn-j2-rpq"/>
-                        <segue destination="4LB-TA-RHW" kind="relationship" relationship="viewControllers" id="u2n-sx-b4X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IU-Tk-llX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
