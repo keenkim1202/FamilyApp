@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C387B2425F2022400DC07E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B2325F2022400DC07E8 /* UserRepository.swift */; };
+		1C387B2A25F2064F00DC07E8 /* FamilyApp++Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B2925F2064F00DC07E8 /* FamilyApp++Bool.swift */; };
 		1C4401AC25EF441D001E2B74 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4401AB25EF441D001E2B74 /* HomeTableViewCell.swift */; };
 		1C4401B125EF4E99001E2B74 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4401B025EF4E99001E2B74 /* UserType.swift */; };
 		1C4401B425EF62C6001E2B74 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4401B325EF62C6001E2B74 /* Color.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1C387B2325F2022400DC07E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		1C387B2925F2064F00DC07E8 /* FamilyApp++Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyApp++Bool.swift"; sourceTree = "<group>"; };
 		1C4401AB25EF441D001E2B74 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1C4401B025EF4E99001E2B74 /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		1C4401B325EF62C6001E2B74 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 				1C387B2325F2022400DC07E8 /* UserRepository.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		1C387B2825F2063E00DC07E8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1C387B2925F2064F00DC07E8 /* FamilyApp++Bool.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		1C4401AF25EF4E83001E2B74 /* Model */ = {
@@ -117,6 +127,7 @@
 		1CBC41AC25EA367F0012444A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1C387B2825F2063E00DC07E8 /* Shared */,
 				1C387B2225F2021100DC07E8 /* Service */,
 				1C4401AF25EF4E83001E2B74 /* Model */,
 				1C387B1F25F1FE4100DC07E8 /* View Controllers */,
@@ -211,6 +222,7 @@
 				1C387B2425F2022400DC07E8 /* UserRepository.swift in Sources */,
 				1C4401AC25EF441D001E2B74 /* HomeTableViewCell.swift in Sources */,
 				1C848CF525EBC5F500F24D42 /* HomeViewController.swift in Sources */,
+				1C387B2A25F2064F00DC07E8 /* FamilyApp++Bool.swift in Sources */,
 				1C4401B125EF4E99001E2B74 /* UserType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
