@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
   let searchController: UISearchController = UISearchController()
 
   var searchWord: String? = nil
-  
+
   var entries: [UserType] = []
   var filteredEntries: [UserType] = []
   var selectedUserType: UserType?

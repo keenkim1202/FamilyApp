@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="1868.1159420289857" y="-141.29464285714286"/>
         </scene>
-        <!--Message-->
+
         <scene sceneID="1f2-gg-fXL">
             <objects>
                 <viewController id="EwN-rJ-VDf" sceneMemberID="viewController">
@@ -158,11 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="JIQ-fb-Pht"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Message" image="message.fill" catalog="system" id="K8R-k7-cqq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="raW-gQ-V8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="958" y="535"/>
+
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ER5-r4-pag">
@@ -176,7 +172,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="bYf-4k-51z" kind="relationship" relationship="viewControllers" id="Pdn-j2-rpq"/>
-                        <segue destination="EwN-rJ-VDf" kind="relationship" relationship="viewControllers" id="u2n-sx-b4X"/>
+
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IU-Tk-llX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
