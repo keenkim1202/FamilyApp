@@ -22,15 +22,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-j5-oOP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="739"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-r5-qsw">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Mgm-Aq-SuM"/>
-                                                </connections>
-                                            </searchBar>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="grX-Np-7YM">
-                                                <rect key="frame" x="0.0" y="56" width="414" height="683"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="739"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="memberCell" rowHeight="120" id="R6a-g9-MQE" customClass="HomeTableViewCell" customModule="FamilyApp" customModuleProvider="target">
@@ -121,12 +114,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="grX-Np-7YM" secondAttribute="bottom" id="B0U-Wx-NUX"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vbg-r5-qsw" secondAttribute="trailing" id="WBz-ql-KoC"/>
                                             <constraint firstItem="grX-Np-7YM" firstAttribute="leading" secondItem="gXX-j5-oOP" secondAttribute="leading" id="ZRo-O9-dfD"/>
-                                            <constraint firstItem="grX-Np-7YM" firstAttribute="top" secondItem="Vbg-r5-qsw" secondAttribute="bottom" id="ipt-AM-sdY"/>
-                                            <constraint firstItem="Vbg-r5-qsw" firstAttribute="leading" secondItem="gXX-j5-oOP" secondAttribute="leading" id="jPU-rD-Hob"/>
                                             <constraint firstAttribute="trailing" secondItem="grX-Np-7YM" secondAttribute="trailing" id="q1P-Ei-rlE"/>
-                                            <constraint firstItem="Vbg-r5-qsw" firstAttribute="top" secondItem="gXX-j5-oOP" secondAttribute="top" id="vcT-Ec-hPm"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -149,10 +138,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="가족 목록" id="Mt6-Qq-TKc">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="YbX-3T-q0b"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YbX-3T-q0b"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="Vbg-r5-qsw" id="Qp6-TX-1yh"/>
                         <outlet property="tableView" destination="grX-Np-7YM" id="KzS-jk-3qn"/>
                     </connections>
                 </viewController>
