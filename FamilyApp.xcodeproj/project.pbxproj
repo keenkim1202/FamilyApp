@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C387B2425F2022400DC07E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B2325F2022400DC07E8 /* UserRepository.swift */; };
 		1C387B2A25F2064F00DC07E8 /* FamilyApp++Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B2925F2064F00DC07E8 /* FamilyApp++Bool.swift */; };
+		1C387B2E25F221B900DC07E8 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B2D25F221B900DC07E8 /* MessageViewController.swift */; };
+		1C387B3125F221CE00DC07E8 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C387B3025F221CE00DC07E8 /* MessageTableViewCell.swift */; };
 		1C4401AC25EF441D001E2B74 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4401AB25EF441D001E2B74 /* HomeTableViewCell.swift */; };
 		1C4401B125EF4E99001E2B74 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4401B025EF4E99001E2B74 /* UserType.swift */; };
 		1C4401B425EF62C6001E2B74 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4401B325EF62C6001E2B74 /* Color.xcassets */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		1C387B2325F2022400DC07E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		1C387B2925F2064F00DC07E8 /* FamilyApp++Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyApp++Bool.swift"; sourceTree = "<group>"; };
+		1C387B2D25F221B900DC07E8 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		1C387B3025F221CE00DC07E8 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		1C4401AB25EF441D001E2B74 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1C4401B025EF4E99001E2B74 /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		1C4401B325EF62C6001E2B74 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				1C848CF425EBC5F500F24D42 /* HomeViewController.swift */,
+				1C387B2D25F221B900DC07E8 /* MessageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -59,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1C4401AB25EF441D001E2B74 /* HomeTableViewCell.swift */,
+				1C387B3025F221CE00DC07E8 /* MessageTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 			files = (
 				1CBC419625EA365A0012444A /* AppDelegate.swift in Sources */,
 				1CBC419825EA365A0012444A /* SceneDelegate.swift in Sources */,
+				1C387B3125F221CE00DC07E8 /* MessageTableViewCell.swift in Sources */,
+				1C387B2E25F221B900DC07E8 /* MessageViewController.swift in Sources */,
 				1C387B2425F2022400DC07E8 /* UserRepository.swift in Sources */,
 				1C4401AC25EF441D001E2B74 /* HomeTableViewCell.swift in Sources */,
 				1C848CF525EBC5F500F24D42 /* HomeViewController.swift in Sources */,
