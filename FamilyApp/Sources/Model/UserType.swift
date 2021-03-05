@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Member {
+struct UserType {
   var name: String
   var state: String
   var thumbnail: UIImage?
