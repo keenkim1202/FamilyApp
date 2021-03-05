@@ -10,13 +10,13 @@ import UIKit
 class HomeViewController: UIViewController {
   
   // TODO : 매세지 목록 탭 화면 구성하기
+  // TODO : 레포지토리 활용하기??
   
   var userType: UserType?
   
   let searchController: UISearchController = UISearchController()
 
   var searchWord: String? = nil
-  
   var entries: [UserType] = []
   var filteredEntries: [UserType] = []
   var selectedUserType: UserType?
